@@ -11,10 +11,11 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: dbname
-      MYSQL_USER: username
-      MYSQL_PASSWORD: password
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mydatabase
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_SSL_MODE=REQUIRED
     ports:
       - 3306:3306
     volumes:
