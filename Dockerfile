@@ -7,11 +7,11 @@ WORKDIR /app
 COPY . .
 #on copie les fichiers de notre app dans le conteneur
 
-RUN go build -o main .
+RUN go build -o ./cmd/server/main ./cmd/server/main.go
 #compile l'application
 
 EXPOSE 8080
 #le port sur lequel écoute l'app
 
-CMD ["./main"]
+CMD ["./cmd/server/main"]
 #Commande pour exec l'app
