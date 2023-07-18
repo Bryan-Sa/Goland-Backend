@@ -5,4 +5,6 @@ use (
 	./cmd/server/
 	./internal/controllers/users
 	./internal/DTO
+	./internal/entities
+	./internal/utils
 )
