@@ -9,7 +9,7 @@ import (
 
 func SetupRoutes() *httprouter.Router {
 	router := httprouter.New()
-	router.POST("/login", users.RegisterUser)
+	router.POST("/register", users.RegisterUser)
 	return router
 }
 

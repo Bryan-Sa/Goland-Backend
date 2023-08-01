@@ -1,7 +1,6 @@
 package DTO
 
 type UserLoginRequestBodyDTO struct {
-	Name     string `json:"name" validate:"required"`
-	Email    string `json:"email"  validate:"required,email"`
-	Password int    `json:"password"  validate:"required"`
+	email    string `json:"email"  validate:"required,email"`
+	password int    `json:"password"  validate:"required"`
 }

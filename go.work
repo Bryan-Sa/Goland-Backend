@@ -2,9 +2,12 @@ go 1.18
 
 use (
 	./api/route/
+	./db
 	./cmd/server/
+	./internal/repository
 	./internal/controllers/users
 	./internal/DTO
 	./internal/entities
 	./internal/utils
+	./internal/services
 )

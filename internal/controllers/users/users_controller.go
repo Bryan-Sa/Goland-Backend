@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/Bryan-Sa/Goland-Backend/internal/DTO"
+	"github.com/Bryan-Sa/Goland-Backend/internal/service"
 	"github.com/Bryan-Sa/Goland-Backend/internal/utils"
 	"github.com/julienschmidt/httprouter"
 )
@@ -25,5 +26,9 @@ func RegisterUser(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	if errValidator := utils.ValidateStruct(loginDTO); errValidator != nil {
 		fmt.Println(errValidator)
 		utils.SendJsonResponse(w, errValidator.Error(), http.StatusBadRequest)
+		return
 	}
+	service.RegisterUser(loginDTO)
+	//appeler le service
+
 }
